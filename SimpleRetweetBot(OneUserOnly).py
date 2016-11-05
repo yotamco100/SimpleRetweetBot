@@ -5,7 +5,7 @@ twitter_consumer_secret = ''
 twitter_access_token = ''
 twitter_access_secret = ''
 twitter = twitter.Api(consumer_key=twitter_consumer_key, consumer_secret=twitter_consumer_secret, access_token_key=twitter_access_token, access_token_secret=twitter_access_secret)
-#authenticate with Twitter Apps (temp. private acc.)
+#authenticate with Twitter Apps (add your own twitter keys)
 
 handle = ""
 lastTweetId = twitter.GetUserTimeline(screen_name=handle, include_rts=False, count=1)[0].id
