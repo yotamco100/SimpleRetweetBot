@@ -14,4 +14,6 @@ while(True):
     newTweet = twitter.GetUserTimeline(screen_name=handle, include_rts=False, count=1)[0].id
     if (newTweet > lastTweetId):
         print("New tweet from {} with ID {}.".format(handle, newTweet))
+        twitter.PostRetweet(newTweet)
+        print("Retweet successful. Waiting...")
         lastTweetId = newTweet
